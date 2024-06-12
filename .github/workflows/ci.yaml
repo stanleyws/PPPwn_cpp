@@ -28,7 +28,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - { target: powrpc-linux-musl,  os: ubuntu-latest, strip: "llvm-strip", upx: "upx --lzma",
+          - { target: powerpc-linux-musl,  os: ubuntu-latest, strip: "llvm-strip", upx: "upx --lzma",
               cmake: "-DUSE_SYSTEM_PCAP=OFF -DZIG_COMPILE_OPTION='-mcpu=ppc;-ffunction-sections'" }
     steps:
       - uses: actions/checkout@v4
