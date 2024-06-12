@@ -28,8 +28,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - { target: mips-linux-musl,  os: ubuntu-latest, strip: "llvm-strip", upx: "upx --lzma",
-              cmake: "-DUSE_SYSTEM_PCAP=OFF -DZIG_COMPILE_OPTION='-mcpu=mips32;-msoft-float;-ffunction-sections'" }
+          - { target: powrpc-linux-musl,  os: ubuntu-latest, strip: "llvm-strip", upx: "upx --lzma",
+              cmake: "-DUSE_SYSTEM_PCAP=OFF -DZIG_COMPILE_OPTION='-mcpu=ppc;-ffunction-sections'" }
     steps:
       - uses: actions/checkout@v4
 
